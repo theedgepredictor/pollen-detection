@@ -1,0 +1,6 @@
+numpy
+pandas
+Requests
+pydantic
+beautifulsoup4
+python-dateutil

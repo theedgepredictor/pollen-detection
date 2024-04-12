@@ -8,9 +8,9 @@ import os
 
 import pandas as pd
 
-from src.consts import MEDIA_METADATA_COLUMNS
-from src.services.annotations.pollen20 import run_pollen20_annotation_importer
-from src.utils import get_dataframe
+from services.consts import MEDIA_METADATA_COLUMNS
+from services.metadata_builder.annotations.pollen20 import run_pollen20_annotation_importer
+from services.utils import get_dataframe
 
 
 def runner(pollen20_import=True):

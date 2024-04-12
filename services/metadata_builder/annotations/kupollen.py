@@ -1,6 +1,6 @@
 import pandas as pd
 
-from src.utils import get_dataframe
+from services.utils import get_dataframe
 
 
 def run_pollen20_annotation_importer():

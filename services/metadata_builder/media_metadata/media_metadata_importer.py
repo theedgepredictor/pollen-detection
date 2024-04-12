@@ -3,10 +3,10 @@ import os
 
 import pandas as pd
 
-from src.consts import MEDIA_METADATA_COLUMNS
-from src.services.media_metadata.kupollen import run_ku_media_metadata_importer
-from src.services.media_metadata.pollen20 import run_pollen20_media_metadata_importer
-from src.utils import get_dataframe
+from services.consts import MEDIA_METADATA_COLUMNS
+from services.metadata_builder.media_metadata.kupollen import run_ku_media_metadata_importer
+from services.metadata_builder.media_metadata.pollen20 import run_pollen20_media_metadata_importer
+from services.utils import get_dataframe
 
 
 #####################################################################

@@ -3,7 +3,7 @@ from datetime import datetime
 
 import pandas as pd
 
-from src.utils import name_filter, get_dataframe
+from services.utils import name_filter, get_dataframe
 
 
 class Pollen20MediaMetadata:

@@ -6,8 +6,8 @@ import datetime
 import string
 import pandas as pd
 
-from src.consts import KU_COMMON_NAMES, POLLEN20_NAMES
-from src.utils import get_webpage, get_webpage_soup, name_filter, re_braces
+from services.consts import KU_COMMON_NAMES, POLLEN20_NAMES
+from services.utils import get_webpage, get_webpage_soup, name_filter, re_braces
 
 WEBSITE_URL = 'https://www.pollenlibrary.com'
 def get_all_pollen_types_for_letter(letter:str):

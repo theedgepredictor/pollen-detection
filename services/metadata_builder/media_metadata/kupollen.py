@@ -5,7 +5,7 @@ from datetime import datetime
 
 import pandas as pd
 
-from src.utils import get_dataframe, name_filter
+from services.utils import get_dataframe, name_filter
 
 
 class KUMediaMetadata:

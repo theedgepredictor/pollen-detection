@@ -8,6 +8,24 @@ from bs4 import BeautifulSoup
 import datetime
 import string
 import random
+import torch
+
+def get_pipeline_prediction(image,image_processor, model, confidence_threshold=0.45, device='cpu'):
+    with torch.no_grad():
+        # load image and predict
+        inputs = image_processor(images=image, return_tensors='pt').to(device)
+        outputs = model(**inputs)
+
+        # post-process
+        target_sizes = torch.tensor([image.shape[:2]]).to(device)
+        results = image_processor.post_process_object_detection(
+            outputs=outputs,
+            threshold=confidence_threshold,
+            target_sizes=target_sizes
+        )[0]
+    return results
+
+
 def get_dataframe(path: str, verbose:int=0):
     """
     Read a DataFrame from a csv file.
@@ -69,3 +87,6 @@ def get_subpage_content(url:str):
         'content':str(content),
         'scraped_at':datetime.datetime.now()
     }
+
+def image_renamer(name: str):
+    return name.replace('-','_').replace(' ','')

@@ -2,6 +2,10 @@
 
 Data pipeline for collecting, labeling and preprocessing microscopic images and videos for computer vision. The goal is to make a service that can update an existing image database with new images or videos that can be used for detecting pollen grains on microscope slides
 
+## Pipeline 
+
+1. Add dataset to 
+
 ### References
 
 [Thesis Work](https://www.sciencedirect.com/science/article/pii/S108112062100644X): My thesis work on pollen grain object detection
